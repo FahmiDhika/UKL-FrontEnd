@@ -1,0 +1,53 @@
+import { ReactNode } from "react";
+import Sidebar from "./sideBar";
+// import { IUser } from "@/app/types";
+import { getCookies } from "@/lib/server-cookie";
+import { get } from "@/lib/api-bridge";
+import { BASE_API_URL, BASE_IMAGE_URL } from "@/global";
+
+type itemType = {
+  id: string;
+  icon: ReactNode;
+  path: string;
+  label: string;
+};
+
+type adminProp = {
+  children: ReactNode;
+  id: string;
+  title: string;
+  //   user: IUser | null
+  itemList: itemType[];
+};
+
+// const getUser = async (): Promise<IUser | null> => {
+//   try {
+//     const TOKEN = await getCookies("token");
+//     const url = `${BASE_API_URL}/`;
+//     const { data } = await get(url, TOKEN);
+//     if (data?.status) return data.data;
+//     return null;
+//   } catch (error) {
+//     console.log(error);
+//     return null;
+//   }
+// };
+
+const AdminTemplate = ({ children, id, title, itemList }: adminProp) => {
+  //   const profile: IUser | null = await getUser();
+
+  return (
+    <div className="w-full min-h-dvh bg-slate-50">
+      <Sidebar
+        itemList={itemList}
+        title={title}
+        id={id}
+        // user={profile}
+      >
+        {children}
+      </Sidebar>
+    </div>
+  );
+};
+
+export default AdminTemplate;
