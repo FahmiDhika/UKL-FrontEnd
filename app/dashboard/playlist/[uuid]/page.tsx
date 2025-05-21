@@ -46,7 +46,7 @@ export default function PlaylistDetailPage() {
             return (
               <div
                 key={song.uuid}
-                className="border border-gray-300 p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 bg-gradient-to-tr from-white to-purple-50 flex gap-6 items-center"
+                className="border border-gray-300 cursor-pointer p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 bg-gradient-to-tr from-white to-purple-50 flex gap-6 items-center"
                 onClick={() =>
                   router.push(`/dashboard/playlist/${uuid}/song/${song.uuid}`)
                 }

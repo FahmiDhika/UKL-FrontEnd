@@ -5,7 +5,7 @@ import { KeyboardEvent, ReactNode } from "react";
 type prop = {
   value: string;
   onChange: (value: string) => void;
-  type: `text` | `number` | `color` | `email` | `password` | `date`;
+  type: `text` | `number` | `color` | `email` | `password` | `date` | `url`;
   className?: string;
   id: string;
   required?: boolean;

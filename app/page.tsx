@@ -46,7 +46,7 @@ export default function Home() {
         {/* soal 3 */}
         <div
           className="bg-[#98D2C0] px-9 py-6 rounded-2xl shadow-xl text-center cursor-pointer"
-          onClick={() => router.push(`/namasoal`)}
+          onClick={() => router.push(`/newsong`)}
         >
           <GiLoveSong size={150} className="mb-4" />
           <p className="text-2xl">New Song</p>

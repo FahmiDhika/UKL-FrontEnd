@@ -1,11 +1,9 @@
-export interface IUser {
-  nama_nasabah: string;
-  gender: string;
-  alamat: string;
-  telepon: string;
-  username: string;
-  password: string;
-  foto: string;
+export interface ISong {
+  title: string;
+  artist: string;
+  description: string;
+  source: string;
+  thumbnail: string;
 }
 
 export interface IPlaylist {

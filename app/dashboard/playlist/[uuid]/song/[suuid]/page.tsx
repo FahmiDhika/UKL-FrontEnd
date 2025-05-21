@@ -4,8 +4,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import axios from "axios";
 import Image from "next/image";
-
-const BASE_API_URL = "https://learn.smktelkom-mlg.sch.id/ukl2";
+import { BASE_API_URL } from "@/global";
 
 export default function SongDetailPage() {
   const { uuid, suuid } = useParams();
@@ -39,26 +38,28 @@ export default function SongDetailPage() {
     <div className="min-h-screen bg-gradient-to-br from-sky-200 to-white p-6">
       <div className="max-w-5xl mx-auto bg-white rounded-3xl shadow-2xl p-10">
         <h1 className="text-4xl text-purple-800 mb-8 text-center drop-shadow-md">
-          🎵 Detail Lagu: <span className="font-bold">{song.title}</span>
+          🎵 Detail Lagu: <span className="font-bold border-b-4">{song.title}</span>
         </h1>
 
-        <div className="border border-gray-300 p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 bg-gradient-to-tr from-white to-purple-50">
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
+        <div className="border border-gray-300 p-6 text-center rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 bg-gradient-to-tr from-white to-purple-50">
+          <div className="w-full flex justify-center">
             <Image
               src={thumbnailUrl}
               alt={song.title}
-              width={120}
-              height={120}
+              width={300}
+              height={300}
               unoptimized={true}
               className="rounded-xl object-cover shadow-md"
             />
+          </div>
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
             <div className="flex-1">
               <h2 className="text-2xl font-bold text-purple-700">
                 {song.title}
               </h2>
               <p className="text-gray-700">🎤 {song.artist}</p>
               <p className="text-sm mt-2 text-gray-800">{song.description}</p>
-              <p className="mt-2 text-sm text-gray-600 flex items-center gap-1">
+              <p className="mt-2 text-md text-red-600 flex justify-center items-center gap-1">
                 👍 <span>{song.likes.toLocaleString()}</span> likes
               </p>
               <a

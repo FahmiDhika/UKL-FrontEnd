@@ -13,7 +13,7 @@ const RootLayout = ({ children }: PropsLayout) => {
   return (
     <div>
       {children}
-      <ToastContainer containerId={`toastRegister`} />
+      <ToastContainer containerId={`toastNewSong`} />
     </div>
   );
 };
