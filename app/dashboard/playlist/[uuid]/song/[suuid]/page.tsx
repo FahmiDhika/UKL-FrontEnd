@@ -36,12 +36,12 @@ export default function SongDetailPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-sky-200 to-white p-6">
-      <div className="max-w-5xl mx-auto bg-white rounded-3xl shadow-2xl p-10">
+      <div className="max-w-5xl mx-auto bg-white/30 backdrop-blur-xl rounded-3xl shadow-2xl p-10">
         <h1 className="text-4xl text-purple-800 mb-8 text-center drop-shadow-md">
           🎵 Detail Lagu: <span className="font-bold border-b-4">{song.title}</span>
         </h1>
 
-        <div className="border border-gray-300 p-6 text-center rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 bg-gradient-to-tr from-white to-purple-50">
+        <div className="border border-gray-300 p-6 text-center rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 bg-gradient-to-tr bg-white/30 backdrop-blur-xl">
           <div className="w-full flex justify-center">
             <Image
               src={thumbnailUrl}
@@ -77,7 +77,7 @@ export default function SongDetailPage() {
             <h3 className="font-semibold text-gray-700 mb-3 text-lg">
               💬 Komentar:
             </h3>
-            <ul className="space-y-2">
+            <ul className="space-y-2 text-start">
               {song.comments.map((comment: any, index: number) => (
                 <li
                   key={index}

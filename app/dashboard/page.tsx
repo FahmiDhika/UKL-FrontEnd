@@ -43,7 +43,7 @@ export default function PlaylistPage() {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-sky-200 to-white">
-      <div className="bg-white rounded-2xl shadow-lg p-8 w-full max-w-md">
+      <div className="w-full max-w-md bg-white/30 backdrop-blur-xl rounded-2xl p-8 shadow-2xl">
         <div className="flex justify-center mb-4">
           <Image src={Logo} alt="Logo" width={200} className="rounded-full" />
         </div>
@@ -60,7 +60,7 @@ export default function PlaylistPage() {
               onClick={() =>
                 router.push(`/dashboard/playlist/${playlist.uuid}`)
               }
-              className="border border-gray-300 p-4 rounded-lg hover:bg-purple-50 transition cursor-pointer"
+              className="border border-gray-300 p-4 rounded-lg hover:bg-indigo-200 transition cursor-pointer"
             >
               <h2 className="text-lg font-semibold">
                 {playlist.playlist_name}

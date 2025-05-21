@@ -53,7 +53,7 @@ export default function RegisterPage() {
           type: `success`,
         });
         console.log(data?.message);
-        setTimeout(() => router.replace(`/`), 3000);
+        setTimeout(() => router.replace(`/`), 2000);
       } else {
         toast.dismiss();
         toast(data?.message, {
@@ -124,7 +124,7 @@ export default function RegisterPage() {
             onChange={(val) => setUser({ ...user, source: val })}
             required={true}
             label="Link Source"
-            placeholder="Jl. in aja dulu"
+            placeholder="www.youtube.com/..."
           />
 
           <FileInput
